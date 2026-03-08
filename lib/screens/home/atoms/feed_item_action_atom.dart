@@ -1,11 +1,11 @@
 import 'package:atomic_design_example/helpers/context_theme_ext.dart';
 import 'package:flutter/material.dart';
 
-class FeedItemActionAtom extends StatelessWidget {
+class FeedTileActionAtom extends StatelessWidget {
   final IconData icon;
   final int count;
 
-  const FeedItemActionAtom({
+  const FeedTileActionAtom({
     super.key,
     required this.icon,
     required this.count,

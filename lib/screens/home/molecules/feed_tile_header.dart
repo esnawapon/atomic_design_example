@@ -1,12 +1,12 @@
 import 'package:atomic_design_example/helpers/context_theme_ext.dart';
 import 'package:flutter/material.dart';
 
-class FeedItemHeader extends StatelessWidget {
+class FeedTileHeader extends StatelessWidget {
   final String username;
   final String userhandle;
   final String time;
 
-  const FeedItemHeader({
+  const FeedTileHeader({
     super.key,
     required this.username,
     required this.userhandle,

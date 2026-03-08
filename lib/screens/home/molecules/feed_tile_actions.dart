@@ -1,12 +1,12 @@
 import 'package:atomic_design_example/screens/home/atoms/feed_item_action_atom.dart';
 import 'package:flutter/material.dart';
 
-class FeedItemActions extends StatelessWidget {
+class FeedTileActions extends StatelessWidget {
   final int commentCount;
   final int shareCount;
   final int likeCount;
 
-  const FeedItemActions({
+  const FeedTileActions({
     super.key,
     required this.commentCount,
     required this.shareCount,
@@ -18,9 +18,9 @@ class FeedItemActions extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        FeedItemActionAtom(icon: Icons.chat_bubble_outline, count: commentCount),
-        FeedItemActionAtom(icon: Icons.repeat, count: shareCount),
-        FeedItemActionAtom(icon: Icons.favorite_border, count: likeCount),
+        FeedTileActionAtom(icon: Icons.chat_bubble_outline, count: commentCount),
+        FeedTileActionAtom(icon: Icons.repeat, count: shareCount),
+        FeedTileActionAtom(icon: Icons.favorite_border, count: likeCount),
         const Icon(Icons.bookmark_border, size: 20),
       ],
     );

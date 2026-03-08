@@ -2,11 +2,11 @@ import 'package:atomic_design_example/helpers/context_theme_ext.dart';
 import 'package:atomic_design_example/helpers/widget_padding_ext.dart';
 import 'package:flutter/material.dart';
 
-class FeedItemBody extends StatelessWidget {
+class FeedTileBody extends StatelessWidget {
   final String imageUrl;
   final String content;
 
-  const FeedItemBody({
+  const FeedTileBody({
     super.key,
     required this.imageUrl,
     required this.content,

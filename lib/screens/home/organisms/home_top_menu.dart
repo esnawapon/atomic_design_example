@@ -1,4 +1,5 @@
 import 'package:atomic_design_example/app/app_cubit.dart';
+import 'package:atomic_design_example/app/app_state.dart';
 import 'package:atomic_design_example/helpers/context_screen_ext.dart';
 import 'package:atomic_design_example/helpers/widget_padding_ext.dart';
 import 'package:atomic_design_example/models/quick_menu.dart';

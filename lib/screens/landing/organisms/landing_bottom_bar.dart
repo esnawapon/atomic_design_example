@@ -1,4 +1,5 @@
 import 'package:atomic_design_example/app/app_cubit.dart';
+import 'package:atomic_design_example/app/app_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,10 +21,23 @@ class LandingBottomBar extends StatelessWidget {
               icon: Icon(Icons.home_outlined),
               label: 'Home',
             ),
-            NavigationDestination(
-              selectedIcon: Badge.count(count: 2, child: Icon(Icons.people)),
-              icon: Badge.count(count: 2, child: Icon(Icons.people_outline)),
-              label: 'Friends',
+            BlocSelector<AppCubit, AppState, int>(
+              selector: (state) => state.unreadNotiCount,
+              builder: (context, unreadNotiCount) {
+                return NavigationDestination(
+                  selectedIcon: Badge.count(
+                    isLabelVisible: unreadNotiCount > 0,
+                    count: unreadNotiCount,
+                    child: Icon(Icons.notifications),
+                  ),
+                  icon: Badge.count(
+                    isLabelVisible: unreadNotiCount > 0,
+                    count: unreadNotiCount,
+                    child: Icon(Icons.notifications_outlined),
+                  ),
+                  label: 'Notification',
+                );
+              },
             ),
             NavigationDestination(
               selectedIcon: Icon(Icons.person),
